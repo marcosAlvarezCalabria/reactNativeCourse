@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { ScrollView, Text, StyleSheet, Image, View, useColorScheme } from 'react-native';
+import { ScrollView, Text, StyleSheet, Image, View, useColorScheme , useWindowDimensions} from 'react-native';
 
 export default function WelcomeScreen() {
   const colorScheme = useColorScheme();
+  const {width, height, fontScale} = useWindowDimensions();{/**para saber la medidas de la pantalla  */}
+
   return (
     <ScrollView
     indicatorStyle={colorScheme === 'light' ? 'black' : 'white'} // Asegúrate de usar valores soportados
@@ -23,12 +25,16 @@ export default function WelcomeScreen() {
       />
       <Text style={styles.headerText}>Little Lemon</Text>
     </View>
-    <Text style={styles.headerText}>Welcome to Little Lemon</Text>
+    <Text style={styles.headerText}>Welcomey to Little Lemon</Text>
     <Text style={styles.regularText}>
       Little Lemon is a charming neighborhood bistro that serves simple food
       and classic cocktails in a lively but casual environment. We would love
       to hear more about your experience with us!
     </Text>
+    <Text>Window dimensions</Text>
+    <Text>height : { height }</Text>
+    <Text>width : { width }</Text>
+    <Text>FontScale : { fontScale }</Text>
   </ScrollView>
   );
 }
