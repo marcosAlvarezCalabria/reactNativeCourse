@@ -6,12 +6,13 @@ const WelcomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.title}>Welcome</Text>
       <Image
-        source={require('../assets/little-lemon-logo.png')
-} // Asegúrate de tener este logo en tu proyecto
+        source={require('../assets/little-lemon-logo.png')}
         style={styles.logo}
         resizeMode="contain"
       />
-      <Text style={styles.subtitle}>Little Lemon, your local Mediterranean Bistro</Text>
+      <Text style={styles.subtitle}>
+        Little Lemon, your local Mediterranean Bistro
+      </Text>
       <View style={styles.buttonContainer}>
         <Button
           title="Newsletter"
@@ -50,4 +51,3 @@ const styles = StyleSheet.create({
 });
 
 export default WelcomeScreen;
-
